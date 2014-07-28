@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang-ko="">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Tree</title>
+    <link rel="stylesheet" href="../vendor/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="snb_organization">
+    <div class="title_set">
+        <h3 class="title">조직도</h3>
+        <div class="menu">
+            <button class="btn_add" type="button">
+                <span><i class="ico_add"></i>조직추가</span>
+            </button>
+        </div>
+    </div>
+    <div class="tree_set"></div>
+    <div class="context_menu" style="display:none;">
+        <ul>
+            <li><button type="button" class="change"><span>이름바꾸기</span></button></li>
+            <li><button type="button" class="remove"><span>삭제</span></button></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/template" id="tmpl_root_node">
+    <h4 class="company">
+    <% if(company.hasChildren()) { %>
+    <a class="link selected has_child opened_child" data-organization-id="<%= company.nId %>" href="#">
+    <% }else{ %>
+    <a class="link selected" data-organization-id="<%= company.nId %>" href="#">
+        <% } %>
+        <span><%= company.sName %></span>
+    </a>
+    <button>폴더 닫기</button>
+    </h4>
+    <ul class="list opened"></ul>
+    <h4 class="unspecified">
+        <a class="link" data-organization-id="<%= unspecified.nId %>" href="#">
+            <span><%= unspecified.sName %></span>
+        </a>
+    </h4>
+</script>
+
+<script type="text/template" id="tmpl_plain_node">
+    <li class="node">
+        <% if(organization.hasChildren()) { %>
+        <a class="link has_child" data-organization-id="<%= organization.nId %>" href="#">
+        <% }else{ %>
+        <a class="link" data-organization-id="<%= organization.nId %>" href="#">
+            <% } %>
+            <span class="name"><%= organization.sName %></span>
+        <span class="edit">
+            <label>
+                <span>이름 변경</span>
+                <input class="edit_name" value="<%= organization.sName %>" size="12" type="text"/>
+            </label>
+        </span>
+        </a>
+        <button>폴더 열기</button>
+        <ul></ul>
+    </li>
+</script>
+
+<script src="../vendor/sinonjs/sinon.js"></script>
+<script src="../vendor/jquery/dist/jquery.js"></script>
+<script src="../vendor/underscore/underscore.js"></script>
+<script src="fakeserver.js"></script>
+<script src="../src/namespace.js"></script>
+<script src="../src/naver.model.Organization.js"></script>
+<script src="../src/naver.collection.Organizations.js"></script>
+<script src="../src/naver.view.OrganizationTree.js"></script>
+<script src="../src/naver.view.OrganizationTreeContextMenu.js"></script>
+<script src="../src/organizationTree.js"></script>
+<script>
+    var oOrganizationTree = organizationTree({
+        sApiUrl : '/api/organizations',
+        sSelector : '.snb_organization',
+        useContextMenu : true
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "p_140731_organization_tree",
+  "version": "0.0.1",
+  "description": "조직도 트리 모듈의 마크업",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^1.7.3"
+  }
+}

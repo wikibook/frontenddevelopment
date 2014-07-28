@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Composite</title>
+</head>
+<body>
+
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="Directory.js"></script>
+<script src="File.js"></script>
+<script src="print.js"></script>
+<script>
+    var directory1 = new Directory('나의 모든 파일'),
+        directory2 = new Directory('데스크탑'),
+        directory3 = new Directory('도큐멘트'),
+        directory4 = new Directory('다운로드'),
+        file1 = new File('결재문서.docx'),
+        file2 = new File('주간세미나.pdf');
+
+    directory1.appendChild(directory2);
+    directory1.appendChild(directory3);
+    directory1.appendChild(directory4);
+    directory3.appendChild(file1);
+    directory3.appendChild(file2);
+
+    document.body.innerHTML = generating(directory1);
+</script>
+</body>
+</html>

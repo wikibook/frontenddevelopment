@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스핀박스 데모 뷰</title>
+</head>
+<body>
+    <h1>스핀박스 데모 뷰</h1>
+
+    <div id="spinbox-wrap">
+        <label for="spinbox">Spinbox : </label>
+        <input id="spinbox" type="text">
+        <button class="increase">▲</button>
+        <button class="decrease">▼</button>
+    </div>
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./src/namespace.js"></script>
+    <script src="src/naver.SpinboxModel.js"></script>
+    <script src="src/naver.SpinboxView.js"></script>
+    <script>
+        var oSpinboxModel = new naver.SpinboxModel(200),
+            oSpinboxView = new naver.SpinboxView(oSpinboxModel);
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "name": "{%= name %}",
+    "version": "{%= version %}",
+    "authors": ["{%= author_name %}<{%= author_email %}>"],
+    "license": "{%= licenses %}",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

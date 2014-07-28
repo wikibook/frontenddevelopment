@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Store View</title>
+    <style>
+        .wrap {width:200px;margin:0 auto;padding-top:100px;}
+        .store {margin-top:10px}
+        .store img {width:200px}
+        .store label span {display:block;position:absolute;left:-1000px}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <article id="mart" class="store"></article>
+    <article id="restaurant" class="store"></article>
+</div>
+
+<script type="template" id="tmpl-store">
+    <section>
+        <img src="{{sImage}}" alt="{{sName}}의 사진"/>
+        <h4>{{sName}}</h4>
+        <dl>
+            <dt>영업 종료 시간</dt>
+            <dd>{{sEndTime}}</dd>
+            <dt>상점 설명</dt>
+            <dd>
+                <label>
+                    <span>상점 설명</span>
+                    <input type="text" value="{{sDescription}}"/>
+                </label>
+            </dd>
+        </dl>
+    </section>
+</script>
+
+<script src="StoreModel.js"></script>
+<script src="StoreView.js"></script>
+<script>
+    var oMartModel = new StoreModel('과자가게', 'img/400X250_mart.png'),
+        oRestaurantModel = new StoreModel('스테이크 하우스', 'img/400X250_restaurant.png')
+        oMartView = new StoreView('mart', oMartModel),
+        oRestaurantView = new StoreView('restaurant', oRestaurantModel);
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "OrganizationTree",
+  "description": "자바스크립트 조직도 모듈",
+  "version": "0.1.1",
+  "homepage": "",
+  "author": {},
+  "repository": {},
+  "bugs": {},
+  "licenses": ["MIT"]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Composite",
+  "version": "0.0.1",
+  "authors": [
+    "ju.uyeong <ju.uyeong@nhn.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0"
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Decorator</title>
+</head>
+<body>
+<div id="console"></div>
+
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="TVRemoteControl.js"></script>
+<script src="ExtendRemoteControl.js"></script>
+<script src="SmartRemoteControl.js"></script>
+<script>
+    var oTVRemoteControl = new TVRemoteControl('TV-1001'),
+        oSmartRemoteControl = new SmartRemoteControl(oTVRemoteControl),
+        sConsole = '';
+
+    sConsole = sConsole + '<p>TV 리모콘 :: ' + oTVRemoteControl.on() + '</p>';
+    sConsole = sConsole + '<p>TV 리모콘 :: ' + oTVRemoteControl.off() + '</p>';
+    sConsole = sConsole + '<p>스마트TV 리모콘 :: ' + oSmartRemoteControl.on() + '</p>';
+    sConsole = sConsole + '<p>스마트TV 리모콘 :: ' + oSmartRemoteControl.off() + '</p>';
+    sConsole = sConsole + '<p>스마트TV 리모콘 :: ' + oSmartRemoteControl.movie() + '</p>';
+    sConsole = sConsole + '<p>스마트TV 리모콘 :: ' + oSmartRemoteControl.music() + '</p>';
+
+    document.getElementById('console').innerHTML = sConsole;
+</script>
+</body>
+</html>

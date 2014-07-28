@@ -1,0 +1,66 @@
+// ==================
+// 요소의 사이즈 속성 결정
+// ==================
+.element-size(@width: auto, @height: auto){
+    width: @width;
+    height: @height;
+}
+
+.element-size(@width: auto, @height: auto, @line-height : auto) when (@line-height >= 0) {
+    width: @width;
+    height: @height;
+    line-height: @height + @line-height;
+}
+
+
+// ==================
+// block 레벨 요소를 가운데 정렬한다.
+// ==================
+.element-center() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// ==================
+// 버튼 요소의 속성을 설정한다.
+// ==================
+.button-frame(@color, @background, @border-size, @border-type, @border-color, @border-radius) {
+    color: @color;
+    background-color: @background;
+    border: @border-size @border-type @border-color;
+    border-radius: @border-radius;
+    cursor: pointer;
+}
+
+.button-size(@padding-vertical, @padding-horizontal, @font-size, @line-height) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+}
+
+.button-folder() {
+    .button-frame(#333, transparent, 0, solid, transparent, 0);
+    .button-size(3px, 3px, 0, 0);
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.button-folder(@type) when (@type = plus) {
+    .button-folder();
+    background: url(../img/btn_plus.png) 0 0 no-repeat;
+}
+
+.button-folder(@type) when (@type = minus) {
+    .button-folder();
+    background: url(../img/btn_minus.png) 0 2px no-repeat;
+}
+
+.button-contextmenu(){
+    .button-frame(#666, transparent, 0, solid, transparent, 0);
+    .button-size(3px 21px, 1px 9px, (@font-size-base - 1), 20px);
+    width: 100%;
+    text-align: left;
+}

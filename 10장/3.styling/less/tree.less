@@ -1,0 +1,143 @@
+@import "variables.less";
+@import "mixins.less";
+
+// ==================
+// 조직도 트리의 속성
+// ==================
+.snb_organization {
+    .element-size(220px, 500px);
+    .element-center();
+    font-family: @font-family-dotum;
+    font-size: @font-size-base;
+    position: relative;
+    width:  220px;
+    height: 500px;
+    margin: 0 auto; // 가운데 정렬
+}
+
+// ==================
+// 조직도 트리 title_set의 속성
+// ==================
+.title_set {
+    position: relative;
+    padding-top: @padding-title-base;
+    padding-bottom: @padding-title-base;
+
+    .title {
+        .element-size(auto, @height-title-base, 5px);
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .menu {
+        position: absolute;
+        top: @top-title-menu;
+        right: 0;
+
+        .btn_add {
+            .button-frame(@font-color-base, transparent, 1px, solid, #c0c0c0, 3px);
+            .button-size(0, 9px, inherit, @line-height-title-btn);
+            height: @height-title-btn;
+            letter-spacing: -1px;
+        }
+
+        .ico_add {
+            .element-size(8px, 8px);
+            display: inline-block;
+            background: url(../img/ico_add.png) 0 0 no-repeat;
+            margin-right: 3px;
+        }
+    }
+}
+
+// ==================
+// 조직도 트리 tree_set의 속성
+// ==================
+.tree_set {
+    top: @top-tree-base;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 1px #c8cdd1;
+    color: #888;
+    overflow: auto;
+    position: absolute;
+
+    h4{position: relative;}
+    h4.company{margin: @margin-top-first-node 0 0 @margin-left-first-node;}
+    h4.unspecified{margin: 0 0 @margin-bottom-first-node @margin-left-first-node;}
+
+    .link {
+        .element-size(auto, @height-node-base, 1px);
+        background: url(../img/bg_folder.png) 6px 5px no-repeat;
+        position: relative;
+        display: inline-block;
+        padding: 0 6px 0 24px;
+        font-weight: normal;
+        text-decoration: none;
+        color: @font-color-base;
+
+        &+button{display: none;}
+        &.has_child+button {.button-folder(plus);}
+        &.has_child.opened_child+button {.button-folder(minus);}
+        &:hover{background-color: #e9eced;}
+
+        &.selected {
+            background-color: #dcecfc !important;
+            font-weight: bold;
+        }
+
+        &.editing {
+            span.name{display: none;}
+            span.edit{display: block;}
+
+            span.edit span {
+                display: block;
+                overflow: hidden;
+                position: absolute;
+                left: -1000px;
+            }
+        }
+    }
+
+    .edit{display: none;}
+
+    ul {
+        margin: 3px 0 0;
+        padding-left: @padding-list-base;
+        list-style: none;
+        display: none;
+
+        &.opened{display: block;}
+        &.list{padding-left: @padding-list-large;}
+        & li{position:relative;}
+    }
+}
+
+// ==================
+// 조직도 트리의 컨텍스트 메뉴 속성
+// ==================
+.context_menu {
+    position: absolute;
+    border: 1px solid #888e94;
+    background-color: #f7f8f9;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+    z-index: 100;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul li button {
+        .button-contextmenu();
+
+        &:hover {
+            background-color: #60a9f1;
+            color: #fff;
+        }
+    }
+}

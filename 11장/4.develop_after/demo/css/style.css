@@ -1,0 +1,178 @@
+.snb_organization {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: '돋움', Dotum, Helvetica, 'Apple SD Gothic Neo', AppleGothic, Sans-serif;
+  font-size: 12px;
+  position: relative;
+  width: 220px;
+  height: 500px;
+  margin: 0 auto;
+}
+.title_set {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.title_set .title {
+  width: auto;
+  height: 30px;
+  line-height: 35px;
+  font-size: 17px;
+  margin: 0;
+}
+.title_set .menu {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+.title_set .menu .btn_add {
+  color: #333333;
+  background-color: transparent;
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 9px;
+  font-size: inherit;
+  line-height: 30px;
+  height: 30px;
+  letter-spacing: -1px;
+}
+.title_set .menu .ico_add {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background: url(../img/ico_add.png) 0 0 no-repeat;
+  margin-right: 3px;
+}
+.tree_set {
+  top: 46px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: solid 1px #c8cdd1;
+  color: #888;
+  overflow: auto;
+  position: absolute;
+}
+.tree_set h4 {
+  position: relative;
+}
+.tree_set h4.company {
+  margin: 15px 0 0 20px;
+}
+.tree_set h4.unspecified {
+  margin: 0 0 15px 20px;
+}
+.tree_set .link {
+  width: auto;
+  height: 23px;
+  line-height: 24px;
+  background: url(../img/bg_folder.png) 6px 5px no-repeat;
+  position: relative;
+  display: inline-block;
+  padding: 0 6px 0 24px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #333333;
+}
+.tree_set .link + button {
+  display: none;
+}
+.tree_set .link.has_child + button {
+  color: #333333;
+  background-color: transparent;
+  border: 0 solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 3px 3px;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: url(../img/btn_plus.png) 0 0 no-repeat;
+}
+.tree_set .link.has_child.opened_child + button {
+  color: #333333;
+  background-color: transparent;
+  border: 0 solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 3px 3px;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: url(../img/btn_minus.png) 0 2px no-repeat;
+}
+.tree_set .link:hover {
+  background-color: #e9eced;
+}
+.tree_set .link.selected {
+  background-color: #dcecfc !important;
+  font-weight: bold;
+}
+.tree_set .link.editing span.name {
+  display: none;
+}
+.tree_set .link.editing span.edit {
+  display: block;
+}
+.tree_set .link.editing span.edit span {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: -1000px;
+}
+.tree_set .edit {
+  display: none;
+}
+.tree_set ul {
+  margin: 3px 0 0;
+  padding-left: 20px;
+  list-style: none;
+  display: none;
+}
+.tree_set ul.opened {
+  display: block;
+}
+.tree_set ul.list {
+  padding-left: 40px;
+}
+.tree_set ul li {
+  position: relative;
+}
+.context_menu {
+  position: absolute;
+  border: 1px solid #888e94;
+  background-color: #f7f8f9;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+  z-index: 100;
+}
+.context_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.context_menu ul li button {
+  color: #666666;
+  background-color: transparent;
+  border: 0 solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 3px 21px 1px 9px;
+  font-size: 11px;
+  line-height: 20px;
+  width: 100%;
+  text-align: left;
+}
+.context_menu ul li button:hover {
+  background-color: #60a9f1;
+  color: #fff;
+}

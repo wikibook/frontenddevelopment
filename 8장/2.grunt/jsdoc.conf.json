@@ -1,0 +1,29 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": ["./src"],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "templates": {
+        "systemName": "자바스크립트 스핀박스 모듈",
+        "footer": "",
+        "copyright": "Copyright (c) 2014 NAVER Licensed under the MIT license.",
+        "theme": "cerulean",
+        "navType": "vertical",
+        "linenums": true,
+        "collapseSymbols": false,
+        "inverseNav": false,
+        "outputSourceFiles": true,
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+        "encoding": "utf8",
+        "destination": "docs",
+        "recurse": true,
+        "private": true
+    }
+}

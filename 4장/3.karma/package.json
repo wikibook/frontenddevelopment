@@ -1,0 +1,23 @@
+{
+  "name": "Spinbox",
+  "version": "0.0.1",
+  "description": "자바스크립트 스핀박스 모듈",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "^0.2.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-qunit": "^0.1.3",
+    "qunitjs": "^1.14.0"
+  }
+}

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang-ko="">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Tree</title>
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="snb_organization">
+    <div class="title_set">
+        <h3 class="title">조직도</h3>
+        <div class="menu">
+            <button class="btn_add" type="button">
+                <span><i class="ico_add"></i>조직추가</span>
+            </button>
+        </div>
+    </div>
+    <div class="tree_set">
+        <div class="wrap_list">
+            <h4 class="company">
+                <a class="link has_child opened_child" href="#">
+                    <span>회사</span>
+                </a>
+                <button>폴더 닫기</button>
+            </h4>
+            <ul class="list opened">
+                <li class="node">
+                    <a class="link" href="#">
+                        <span class="name">경영관리부</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="경영관리부" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+                <li class="node">
+                    <a class="link" href="#">
+                        <span class="name">기획개발부</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="기획개발부" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+                <li class="node">
+                    <a class="link selected" href="#">
+                        <span class="name">기술연구소</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="기술연구소" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+                <li class="node">
+                    <a class="link has_child opened_child" href="#">
+                        <span class="name">개발본부</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="개발본부" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul class="opened">
+                        <li class="node">
+                            <a class="link" href="#">
+                                <span class="name">모바일개발팀</span>
+                                <span class="edit">
+                                    <label>
+                                        <span>이름 변경</span>
+                                        <input class="edit_name" value="모바일개발팀" size="12" type="text"/>
+                                    </label>
+                                </span>
+                            </a>
+                            <button>폴더 열기</button>
+                            <ul></ul>
+                        </li>
+                        <li class="node">
+                            <a class="link editing" href="#">
+                                <span class="name">웹개발팀</span>
+                                <span class="edit">
+                                    <label>
+                                        <span>이름 변경</span>
+                                        <input class="edit_name" value="웹개발팀" size="12" type="text"/>
+                                    </label>
+                                </span>
+                            </a>
+                            <button>폴더 열기</button>
+                            <ul></ul>
+                        </li>
+                        <li class="node">
+                            <a class="link" href="#">
+                                <span class="name">플랫폼개발팀</span>
+                                <span class="edit">
+                                    <label>
+                                        <span>이름 변경</span>
+                                        <input class="edit_name" value="플랫폼개발팀" size="12" type="text"/>
+                                    </label>
+                                </span>
+                            </a>
+                            <button>폴더 열기</button>
+                            <ul></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="node">
+                    <a class="link" href="#">
+                        <span class="name">경영관리부</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="경영관리부" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+                <li class="node">
+                    <a class="link" href="#">
+                        <span class="name">디자인센터</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="디자인센터" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+                <li class="node">
+                    <a class="link" href="#">
+                        <span class="name">마케팅사업부</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="마케팅사업부" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+                <li class="node">
+                    <a class="link" href="#">
+                        <span class="name">플랫폼개발팀</span>
+                        <span class="edit">
+                            <label>
+                                <span>이름 변경</span>
+                                <input class="edit_name" value="플랫폼개발팀" size="12" type="text"/>
+                            </label>
+                        </span>
+                    </a>
+                    <button>폴더 열기</button>
+                    <ul></ul>
+                </li>
+            </ul>
+            <h4 class="unspecified">
+                <a class="link" href="#">
+                    <span>조직미지정</span>
+                </a>
+            </h4>
+        </div>
+    </div>
+    <div class="context_menu" style="top:265px;left:100px;">
+        <ul>
+            <li><button type="button" class="change"><span>이름바꾸기</span></button></li>
+            <li><button type="button" class="remove"><span>삭제</span></button></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
